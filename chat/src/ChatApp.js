@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Dashboard() {
+export default function ChatApp() {
     return (
         <>
             <div id="chatWindow">
@@ -12,11 +12,11 @@ export default function Dashboard() {
                     </div>
                     <div class="col-sm-12">
                         <div class="row align-items-center" id="inputSection">
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                     <input id="mySecretKey" class="form-control" type="text" placeholder="Write your secret key here.">
                                     </input>
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                             <input id="otherUserSecretKey" class="form-control" type="text" placeholder="Write their secret key here.">
                                     </input>
                             </div>
