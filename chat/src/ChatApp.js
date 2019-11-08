@@ -5,13 +5,13 @@ export default function ChatApp() {
         <>
             <div id="chatWindow">
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <div id="rooms" class="window">
                         <p>Placeholder for Rooms</p>
                         </div>
 
                     </div>
-                    <div class="col-sm-9">
+                    <div class="col-sm-8">
                         <div id="messageWall" class='window'>
                             <p>Placeholder for messages</p>
                         </div>
