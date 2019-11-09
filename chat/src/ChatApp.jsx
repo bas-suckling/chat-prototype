@@ -1,5 +1,6 @@
 import React from "react"
 import {CTX} from './Store'
+import crypto from './cryptoFunctions'
 
 
 export default function ChatApp() {
@@ -11,6 +12,7 @@ export default function ChatApp() {
     //local state
     const [activeTopic, changeActiveTopic] = React.useState(topics[0])
     const [textValue, changeTextValue] = React.useState('');
+    const [secretKey, changeSecretKey] = React.useState('')
     
 
     return (
@@ -37,7 +39,7 @@ export default function ChatApp() {
                         {
                                     allChats[activeTopic].map((chat, i) => (
                                         <div className="chatMessage"key={i}>
-                                            <p>{chat.from}: {chat.msg}</p>
+                                            <p>{chat.from}: {crypto.decrypt(chat.msg, crypto.hash(secretKey))}</p>
                                         </div>
                                     ))
                                 }
@@ -53,8 +55,9 @@ export default function ChatApp() {
                             <div className="col-sm-2">
                                 <button 
                                 onClick={() => {
-                                    sendChatAction({from: user, msg: textValue, topic: activeTopic})
-                                    changeTextValue('')
+                                    sendChatAction({from: user, msg: crypto.encrypt(textValue, crypto.hash(secretKey)), topic: activeTopic})
+                                    // sendChatAction({from: user, msg: textValue, topic: activeTopic})
+                                    changeTextValue('')   
                                 }} 
                                 type="submit" 
                                 id="sendButton" 
@@ -68,13 +71,13 @@ export default function ChatApp() {
                     <div className="col-sm-12">
                         <div className="row" id="inputSection">
                             <div className="col-sm-4">
-                                    <input id="mySecretKey" className="form-control" type="text" placeholder="Write your secret key here.">
-                                    </input>
+                                    <textarea id="mySecretKey" className="form-control" type="text" placeholder="Write the secret key here." value={secretKey}onChange={e => changeSecretKey(e.target.value)}>>
+                                    </textarea>
                             </div>
-                            <div className="col-sm-4">
+                            {/* <div className="col-sm-4">
                             <input id="otherUserSecretKey" className="form-control" type="text" placeholder="Write their secret key here.">
                                     </input>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
