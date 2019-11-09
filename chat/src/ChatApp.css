@@ -9,31 +9,47 @@ body {
     color: #000e5a;
     margin: 8% 25%;
     border-radius: 10px;
-    padding:0.5%
+    padding:1%
 }
 
 .window {
-    padding: 10px;
+    padding: 15px;
     border: white;
     border-radius: 10px;
     background-color: white;
-    margin:20px;
-    min-height: 400px
+    margin-top: 15px ;
+    margin-bottom: 15px;
+    height: 400px
+}
 
+
+#rooms {
+    margin-left:23px;
+    margin-right:-8px
+    
 }
 
 #messageWall {
-   margin-left:0;
-}
-
-#rooms {
-    margin-right: 0;
+    margin-left:8px;
+    margin-right:15px;
 }
 
 #inputSection {
     display: flex;
     margin: 1% 1%;
-    margin-bottom:2%
+    margin-bottom:2%;
+    border-radius: 10px;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+  }
+
+.sendButton {
+    height: 100%;
+}
+
 
 
