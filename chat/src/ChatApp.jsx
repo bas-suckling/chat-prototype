@@ -3,6 +3,10 @@ import {CTX} from './Store'
 import crypto from './cryptoFunctions'
 
 
+function isEmpty(obj) {
+    return Object.keys(obj).length === 0;
+}
+
 export default function ChatApp() {
     
     // CTX store
@@ -12,7 +16,7 @@ export default function ChatApp() {
     //local state
     const [activeTopic, changeActiveTopic] = React.useState(topics[0])
     const [textValue, changeTextValue] = React.useState('');
-    const [secretKey, changeSecretKey] = React.useState('')
+    const [secretKey, changeSecretKey] = React.useState('yyyyyyyyy')
     
 
     return (
@@ -36,10 +40,12 @@ export default function ChatApp() {
                     </div>
                     <div className="col-sm-9">
                         <div id="messageWall" className='window'>
+                        <p className="adminMsg">Admin: Use a shared secret key to encrypt your message.</p>
                         {
                                     allChats[activeTopic].map((chat, i) => (
                                         <div className="chatMessage"key={i}>
                                             <p>{chat.from}: {crypto.decrypt(chat.msg, crypto.hash(secretKey))}</p>
+                                            {/* <p>{chat.from}: {chat.msg}</p> */}
                                         </div>
                                     ))
                                 }

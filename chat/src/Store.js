@@ -26,12 +26,10 @@ export const CTX = React.createContext()
 
 const initState = {
     "Encrypted Chat": [
-                {from: 'Admin', msg: "Use secret keys to encrypt your message."}
-            ],
-    "Open Chat": [
-        {from: 'Admin', msg: "This chat room does not use encryption."}
-    ]
-}
+                {from: 'test', msg: "395b6e90c4791ed7f87b68397fb43fa3"}
+            ]
+        }
+   
 
 
 function reducer(state, action) {

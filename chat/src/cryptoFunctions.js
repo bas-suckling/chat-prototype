@@ -4,11 +4,11 @@ const crypto = require('crypto');
 let iv = '1234567812345678' // must be a 16 bit string
 
 function encrypt(text, key) {
-    //takes a message as string and returns an object containing the initialisation vector as a hex string, and the encoded message as a hex string.
+    //takes a message as string and returns the encoded message as a hex string.
     let cipher = crypto.createCipheriv('aes-256-cbc', Buffer.from(key), iv)
     let encrypted = cipher.update(text)
     encrypted = Buffer.concat([encrypted, cipher.final()])
-    return encrypted.toString()
+    return encrypted.toString('hex')
 }
 
 function decrypt(text, key) {

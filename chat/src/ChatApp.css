@@ -52,4 +52,6 @@ ul {
 }
 
 
-
+.adminMsg {
+    font-style: italic;
+}
