@@ -5,6 +5,9 @@ import '../src/components/ChatApp/ChatApp.css';
 import '../src/components/NavBar/NavBar.css';
 import '../src/components/Footer/Footer.css';
 import '../src/components/LandingPage/LandingPage.css'
+import '../src/components/Signup/Signup.css';
+import '../src/components/Login/Login.css';
+
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
 

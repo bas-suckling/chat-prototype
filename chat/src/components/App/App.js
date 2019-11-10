@@ -1,20 +1,24 @@
 import React from 'react';
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Route} from 'react-router-dom'
 import ChatApp from '../ChatApp/ChatApp'
 import Store from '../ChatApp/Store'
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer'
 import LandingPage from '../LandingPage/LandingPage'
+import Signup from  '../Signup/Signup'
+import Login from '../Login/Login'
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Route path='/' component={NavBar}/>
-        <Route exactpath="/" component={LandingPage}/>
-        <Store>
+        <Route exact path='/' component={LandingPage}/>
+        <Route exact path="/signup" component={Signup}/>
+        <Route exact path="/login" component={Login}/>
+        {/* <Store>
           <ChatApp />
-        </Store>
+        </Store> */}
         <Route path='/' component={Footer}/>
       </div>
     </Router>
