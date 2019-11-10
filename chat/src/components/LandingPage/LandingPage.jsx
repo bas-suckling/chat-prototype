@@ -41,7 +41,7 @@ export default function LandingPage() {
                     <div className="featureBox col-lg-4">
                         <i className="fas fa-trash-alt fa-4x icons" ></i>
                         <h3>Message Self-Destruction</h3>
-                        <p>Messages are automatically erased within 24 hours, and can be set to custom timeframes.</p>
+                        <p>All messages are only available during the live chat session, and are not stored on any database.</p>
                     </div>
                 </div>
 

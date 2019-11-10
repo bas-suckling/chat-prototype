@@ -14,7 +14,6 @@ export default function NavBar() {
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarLinks">
-
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                             <Link className="nav-link" to="/signup">Sign Up</Link>

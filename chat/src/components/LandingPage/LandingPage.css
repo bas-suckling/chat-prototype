@@ -1,6 +1,6 @@
 h2 {
-    font-weight: bold;
-    font-size: 3rem;
+    
+    font-size: 2rem;
     line-height: 1.5
 }
   /* Title section */
@@ -9,7 +9,7 @@ h2 {
 }
 
 .title h1{
-    font-family: 'Montserrat', sans-serif;
+    font-family: ubuntu;
     font-weight: 900;
     font-size: 3rem;
     line-height: 1.5;
@@ -71,35 +71,7 @@ h2 {
     font-weight: bold;
 }
 
-/* Testimonial section  */
 
-#testimonials {
-
-    text-align: center;
-    background-color:  #000e5a;
-    color: #fff;
-}
-
-.carousel-item {
-    padding: 7% 15%;
-}
-
-.testimonial-image {
-    width: 10%;
-    border-radius: 100%;
-    margin: 20px;
-}
-
-#press {
-    text-align: center;
-    background-color: #000e5a;
-    padding-bottom: 3%;
-}
-
-.press-logo {
-    width: 12%;
-    margin: 20px 20px 50px 20px;
-}
 
 
 /* Pricing section  */
@@ -122,9 +94,9 @@ h2 {
     
 
 #cta h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: ubuntu;
     font-weight: 900;
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 1.5;
     color: white;
 }
