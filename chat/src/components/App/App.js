@@ -1,6 +1,6 @@
 import React from 'react';
-import ChatApp from './ChatApp'
-import Store from './Store'
+import ChatApp from '../ChatApp/ChatApp'
+import Store from '../ChatApp/Store'
 
 function App() {
   return (
