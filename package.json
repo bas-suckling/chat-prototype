@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/bas-suckling/chat-prototype#readme",
   "dependencies": {
+    "random-username-generator": "^1.0.4",
     "react-router-dom": "^5.1.2"
   }
 }

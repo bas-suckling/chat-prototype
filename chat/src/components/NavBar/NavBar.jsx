@@ -1,4 +1,5 @@
 import React from "react"
+import {Link}  from 'react-router-dom'
 
 export default function NavBar() {
 
@@ -6,7 +7,7 @@ export default function NavBar() {
         <>
         <div className="nav-container">
             <nav className="navbar navbar-expand-lg navbar-dark" style={{'padding-left':0+'px'}}>
-                <a className="navbar-brand" href="/">Shhh.</a>
+                <Link className="navbar-brand" to="/">Shhh.</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks"
                     aria-controls="navbarlinks" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -16,16 +17,13 @@ export default function NavBar() {
 
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <a className="nav-link" href="/signup">Sign Up</a>
+                            <Link className="nav-link" to="/signup">Sign Up</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="login">Login</a>
+                            <Link className="nav-link" to="login">Login</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/howitworks">How it Works</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#cta">Contact</a>
+                            <Link className="nav-link" to="/howitworks">How it Works</Link>
                         </li>
                     </ul>
                 </div>

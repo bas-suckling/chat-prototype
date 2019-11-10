@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from 'react-router-dom'
 
 export default function LandingPage() {
 
@@ -10,18 +11,18 @@ export default function LandingPage() {
                         <div className="row">
                             <div className="col-lg-6">
                                 <h1>End to End encrypted messaging not even an authoritarian government can crack.</h1>
-                                <button onclick="window.location.href='/signup'" type="button" className="btn btn-outline-light btn-lg downloadButton">Sign Up</button>
-                                <button onclick="window.location.href='/login'" type="button" className="btn btn-outline-light btn-lg downloadButton">Login</button>
+                                <Link to="/signup"><button type="button" className="btn btn-outline-light btn-lg downloadButton">Sign Up</button></Link>
+                                <Link to="/login"><button type="button" className="btn btn-outline-light btn-lg downloadButton">Login</button></Link>
                             </div>
                             <div className="col-lg-6">
                                 <img src="images/Encrypted-Messaging-Flat-Icon.png" alt="encrypted message image" className="titleImage" />
                             </div>
-
                         </div>
                     </div>
                 </div>
-
             </section>
+
+
 
             {/* features */}
 
@@ -55,8 +56,8 @@ export default function LandingPage() {
   <section id="cta">
 
                 <h3>Your Message Content is Protected No Matter What.</h3>
-                <button onclick="window.location.href='/signup'" type="button" className="btn btn-outline-light btn-lg downloadButton">Sign Up</button>
-                <button onclick="window.location.href='/login'" type="button" className="btn btn-outline-light btn-lg downloadButton">Login</button>
+                <Link to="/signup"><button type="button" className="btn btn-outline-light btn-lg downloadButton">Sign Up</button></Link>
+                                <Link to="/login"><button type="button" className="btn btn-outline-light btn-lg downloadButton">Login</button></Link>
 
 
             </section>
