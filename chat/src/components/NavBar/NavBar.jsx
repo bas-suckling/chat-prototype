@@ -4,7 +4,7 @@ export default function NavBar() {
 
     return (
         <>
-        <div className="container-fluid">
+        <div className="nav-container">
             <nav className="navbar navbar-expand-lg navbar-dark" style={{'padding-left':0+'px'}}>
                 <a className="navbar-brand" href="/">Shhh.</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks"

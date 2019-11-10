@@ -1,5 +1,6 @@
 .navbar {
     padding: 0 0 1% 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-brand {
@@ -27,6 +28,6 @@
     color:white;
 }
 
-.container-fluid {
-    padding: 1% 15% 0 15%;
+.nav-container {
+    padding: 3% 15% 3% 15%;
 }
