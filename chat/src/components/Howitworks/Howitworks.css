@@ -1,0 +1,17 @@
+.noPaddingBottom {
+    padding-bottom: 0%;
+}
+
+#howItWorks {
+    color: white;
+}
+
+.title h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 1.5;
+    color: white;
+    padding-bottom: 20px;
+    
+}

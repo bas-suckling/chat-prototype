@@ -7,6 +7,7 @@ import Footer from '../Footer/Footer'
 import LandingPage from '../LandingPage/LandingPage'
 import Signup from  '../Signup/Signup'
 import Login from '../Login/Login'
+import Howitworks from '../Howitworks/Howitworks'
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
         <Route exact path='/' component={LandingPage}/>
         <Route exact path="/signup" component={Signup}/>
         <Route exact path="/login" component={Login}/>
-        <Store>
+        <Route exact path="/howitworks" component={Howitworks}/>
+        {/* <Store>
           <ChatApp />
-        </Store>
+        </Store> */}
         <Route path='/' component={Footer}/>
       </div>
     </Router>
