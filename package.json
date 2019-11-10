@@ -1,0 +1,23 @@
+{
+  "name": "chat-prototype",
+  "version": "1.0.0",
+  "description": "Chat prototype",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bas-suckling/chat-prototype.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bas-suckling/chat-prototype/issues"
+  },
+  "homepage": "https://github.com/bas-suckling/chat-prototype#readme",
+  "dependencies": {
+    "react-router-dom": "^5.1.2"
+  }
+}
