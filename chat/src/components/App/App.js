@@ -13,15 +13,19 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Route path='/' component={NavBar}/>
+        <NavBar/>
         <Route exact path='/' component={LandingPage}/>
         <Route exact path="/signup" component={Signup}/>
         <Route exact path="/login" component={Login}/>
         <Route exact path="/howitworks" component={Howitworks}/>
-        {/* <Store>
-          <ChatApp />
-        </Store> */}
-        <Route path='/' component={Footer}/>
+        <Route exact path="/chat" render={props => {
+          return (
+            <Store>
+              <ChatApp />
+            </Store>
+          )
+        }}/>
+        <Footer/>
       </div>
     </Router>
   );

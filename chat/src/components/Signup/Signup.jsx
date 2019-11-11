@@ -23,7 +23,7 @@ generate = () => {
     return (
             <section className="container-fluid form-layout" >
                 <section className="row justify-content-center">
-                    <form className="form-container" id="form-signup" action="/signup/newUser" method="">
+                    <form className="form-container" id="form-signup" action="/signup/newUser" onSubmit={(e)=> {e.preventDefault()}}>
                         <a className="navbar-brand" href="/">Shhh.</a>
                         <p> Use the button below to randomly generate <br/> a username.</p> 
                             <br/>
@@ -31,7 +31,7 @@ generate = () => {
                                 <input value={this.state.value} name="username" className="form-control" id="inputUsername" placeholder="Username" autocomplete="off"/>
                             </div>
                             < div className="form-group">
-                                <button onMouseOver={this.generate} className="btn btn-outline-light btn-lg btn-block">Generate Username</button>
+                                <button onClick={this.generate} className="btn btn-outline-light btn-lg btn-block">Generate Username</button>
                                 <br/>
                             </div>
                             <div className="form-group">

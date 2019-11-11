@@ -40,7 +40,7 @@ export default function ChatApp() {
                             <p className="adminMsg">Admin: Use a shared secret key to encrypt your message.</p>
                             {allChats[activeTopic].map((chat, i) => (
                                 <div className="chatMessage" key={i}>
-                                    {isEmpty(chat.msg)?<p></p>:<p>{chat.from}: {crypto.decrypt(chat.msg, crypto.hash(secretKey))}</p>}
+                                    {isEmpty(chat.msg)?<p></p>:<p>{chat.from}: {decrypt(chat, secretKey)}</p>}
                                     
                                     {/* <p>{chat.from}: {chat.msg}</p> */}
                                 </div>
@@ -87,4 +87,13 @@ export default function ChatApp() {
             </div>
         </>
     )
+}
+
+function decrypt(chat, secretKey) {
+    try {
+        return crypto.decrypt(chat.msg, crypto.hash(secretKey))
+    } 
+    catch (e) {
+        return 'XXXXX'
+    }
 }
