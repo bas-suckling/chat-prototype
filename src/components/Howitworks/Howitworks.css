@@ -1,0 +1,30 @@
+
+
+#howItWorks {
+    color: white;
+    padding-bottom: 2%;
+}
+
+#howItWorks p {
+    font-size: 20px;
+}
+
+#howItWorks h1{
+    font-family: ubuntu;
+    font-weight: 900;
+    
+    line-height: 1.5;
+    color: white;
+    padding-bottom: 20px;
+    
+}
+
+#howItWorks a:link {
+    color:white;
+    text-decoration: underline;
+}
+
+a:visited {
+    color:white;
+    text-decoration: underline;
+}

@@ -26,11 +26,8 @@ export const CTX = React.createContext()
 
 const initState = {
     "Encrypted Chat": [
-                {from: 'Admin', msg: "Use secret keys to encrypt your message."}
-            ],
-    "Open Chat": [
-        {from: 'Admin', msg: "This chat room does not use encryption."}
-    ]
+                {from: '', msg: ""}
+            ]
 }
 
 
@@ -42,7 +39,7 @@ function reducer(state, action) {
                 ...state,
                 [topic]: [
                     ...state[topic],
-                    {from,msg}
+                    {from, msg}
                 ]
             }
         default:
