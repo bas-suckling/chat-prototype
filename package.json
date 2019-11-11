@@ -1,24 +1,36 @@
 {
-  "name": "chat-prototype",
-  "version": "1.0.0",
-  "description": "Chat prototype",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bas-suckling/chat-prototype.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bas-suckling/chat-prototype/issues"
-  },
-  "homepage": "https://github.com/bas-suckling/chat-prototype#readme",
+  "name": "chat",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "random-username-generator": "^1.0.4",
-    "react-router-dom": "^5.1.2"
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
+  },
+  "scripts": {
+    "dev": "node ./src/server/index.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

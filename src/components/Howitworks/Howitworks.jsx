@@ -17,7 +17,7 @@ export default function LandingPage() {
                 <br/>
                 <h2>Chat Application</h2>
                 <p>
-                    The application was built using Node.js, React and the chat functionality is facilitates using the <a href="https://socket.io/">Socket.io</a> library.
+                    The application was built using Node.js, React and the chat functionality is facilitated using the <a href="https://socket.io/">Socket.io</a> library.
                 </p>
             </div>
         </>

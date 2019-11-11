@@ -94,6 +94,6 @@ function decrypt(chat, secretKey) {
         return crypto.decrypt(chat.msg, crypto.hash(secretKey))
     } 
     catch (e) {
-        return 'XXXXX'
+        return chat.msg
     }
 }
