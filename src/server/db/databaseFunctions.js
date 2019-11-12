@@ -19,10 +19,7 @@ export function getUser (username, db = connection) {
 //function which adds a new user into the database
 export function addNewUser (user, db = conneciton) {
     return db('users')
-        .insert({
-        username: user.username,
-        password: user.password
-    })
+        .insert(user)
 }
 
 //function which edits a username
