@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "cors": "^2.8.5",
+    "exrpess": "0.0.1-security",
     "knex": "^0.20.1",
+    "path": "^0.12.7",
     "random-username-generator": "^1.0.4",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
