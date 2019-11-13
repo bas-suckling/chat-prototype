@@ -3,9 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.7.1",
+    "babel-loader": "^8.0.5",
     "cors": "^2.8.5",
     "exrpess": "0.0.1-security",
     "knex": "^0.20.1",
+    "nodemon": "^1.19.4",
     "path": "^0.12.7",
     "random-username-generator": "^1.0.4",
     "react": "^16.11.0",
@@ -14,14 +23,28 @@
     "react-scripts": "3.2.0",
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.0",
-    "sqlite3": "^4.1.0"
+    "sqlite3": "^4.1.0",
+    "superagent": "^5.1.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
   },
   "scripts": {
-    "dev": "node ./src/server/index.js",
+    "dev": "nodemon ./src/server/index.js & webpack --watch",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-object-rest-spread"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"

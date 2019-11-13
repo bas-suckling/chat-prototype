@@ -1,4 +1,4 @@
-let app = require('express')();
+let app = require('./server');
 let http = require('http').createServer(app);
 let io = require('socket.io')(http)
 

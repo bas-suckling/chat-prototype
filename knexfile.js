@@ -8,6 +8,12 @@ module.exports = {
       filename: './dev.sqlite3'
     },
     "useNullAsDefault": true,
+    migrations: {
+      directory: './src/server/db/migrations'
+    },
+    seeds: {
+      directory: './src/server/db/seeds'
+    }
   },
 
   staging: {
@@ -23,6 +29,7 @@ module.exports = {
     },
     migrations: {
       tableName: 'knex_migrations'
+     
     }
   },
 

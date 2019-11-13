@@ -5,25 +5,31 @@ const config = require ('../../../knexfile')[environment]
 const connection = require ('knex')(config)
 
 //function which returns all users from database (but not passwords?)
-export function getAllUsers (db = connection) {
+function getAllUsers (db = connection) {
     return db('users').select()
 }
 
 //function which returns a single user
-export function getUser (username, db = connection) {
+function getUser (username, db = connection) {
     return db('users')
         .where('username', username)
         .first()
 }
 
 //function which adds a new user into the database
-export function addNewUser (user, db = conneciton) {
+function addNewUser (user, db = connection) {
     return db('users')
         .insert(user)
 }
 
 //function which edits a username
-export function editUsername (userId, username, db = connection) {
+function editUsername (userId, username, db = connection) {
     return db('users').where('id', userId).update(username)
 }
 
+module.exports = { 
+    getAllUsers,
+    getUser,
+    addNewUser,
+    editUsername
+}
