@@ -1,5 +1,6 @@
 import React from "react"
 import generateUsername from './generateUsername'
+import { addNewUser } from '../api'
 
 class Signup extends React.Component {
     constructor(props) {
@@ -29,7 +30,8 @@ class Signup extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        
+        addNewUser(this.state)
+        .then()
     }
 
 
@@ -37,7 +39,7 @@ class Signup extends React.Component {
     return (
             <section className="container-fluid form-layout" >
                 <section className="row justify-content-center">
-                    <form className="form-container" id="form-signup" action="/signup/newUser" onSubmit={this.handleSubmit}>
+                    <form className="form-container" id="form-signup" action="" onSubmit={this.handleSubmit}>
                         <a className="navbar-brand" href="/">Shhh.</a>
                         <p> Use the button below to randomly generate <br/> a username.</p> 
                             <br/>
@@ -52,7 +54,7 @@ class Signup extends React.Component {
                                 <input name="password" type="password" value={this.state.password} onChange={this.handleChange} className="form-control" id="inputPassword" placeholder="Password" autoComplete="off"/>
                                 <br/>
                             </div>
-                            <button className="btn btn-outline-light btn-lg btn-block">Sign Up</button>
+                            <button type="submit" className="btn btn-outline-light btn-lg btn-block">Sign Up</button>
                     </form>
                 </section>
             </section>

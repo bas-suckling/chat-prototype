@@ -10,16 +10,21 @@ function getAllUsers (db = connection) {
 }
 
 //function which returns a single user
-function getUser (username, db = connection) {
+function getUser (user, db = connection) {
     return db('users')
-        .where('username', username)
+        .where('username', user.username)
         .first()
 }
 
 //function which adds a new user into the database
 function addNewUser (user, db = connection) {
-    return db('users')
+    // if (getUser(user.username) == undefined) {
+        return db('users')
         .insert(user)
+    // }
+    // else {
+    //     return "no way jose"
+    // } 
 }
 
 //function which edits a username
