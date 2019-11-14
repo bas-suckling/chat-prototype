@@ -1,7 +1,5 @@
 import React from "react"
 import {Link} from 'react-router-dom'
-// import './LandingPage.css'
-
 
 export default function LandingPage() {
 
@@ -17,14 +15,12 @@ export default function LandingPage() {
                                 <Link to="/login"><button type="button" className="btn btn-outline-light btn-lg downloadButton">Login</button></Link>
                             </div>
                             <div className="col-lg-6">
-                                <img src="images/Encrypted-Messaging-Flat-Icon.png" alt="encrypted message image" className="titleImage" />
+                                <img src="images/Encrypted-Messaging-Flat-Icon.png" alt="encrypted message" className="titleImage" />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-
 
             {/* features */}
 
@@ -48,10 +44,6 @@ export default function LandingPage() {
                 </div>
 
             </section>
-
-
-
-
 
             {/* <!-- Call to Action --> */}
 

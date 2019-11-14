@@ -54083,7 +54083,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -67542,9 +67542,9 @@ function Footer() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
     id: "footer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\xA9 Copyright 2019 Shhh. We won't tell if you won't."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    class: "fab fa-twitter smallIcon"
+    className: "fab fa-twitter smallIcon"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    class: "fas fa-envelope smallIcon"
+    className: "fas fa-envelope smallIcon"
   })));
 }
 
@@ -67562,8 +67562,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return LandingPage; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-
 
 function LandingPage() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -67596,7 +67594,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
- // import './LandingPage.css'
 
 function LandingPage() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -67623,7 +67620,7 @@ function LandingPage() {
     className: "col-lg-6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "images/Encrypted-Messaging-Flat-Icon.png",
-    alt: "encrypted message image",
+    alt: "encrypted message",
     className: "titleImage"
   })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     id: "features"
@@ -67721,7 +67718,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
- // import './NavBar.css'
 
 function NavBar() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -67729,7 +67725,7 @@ function NavBar() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     className: "navbar navbar-expand-lg navbar-dark",
     style: {
-      'padding-left': 0 + 'px'
+      'paddingLeft': 0 + 'px'
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "navbar-brand",
@@ -67864,7 +67860,7 @@ function (_React$Component) {
         className: "form-control",
         id: "inputUsername",
         placeholder: "Username",
-        autocomplete: "off"
+        autoComplete: "off"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -67880,9 +67876,8 @@ function (_React$Component) {
         className: "form-control",
         id: "inputPassword",
         placeholder: "Password",
-        autocomplete: "off"
+        autoComplete: "off"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "",
         className: "btn btn-outline-light btn-lg btn-block"
       }, "Sign Up"))));
     }
@@ -67927,14 +67922,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_App_App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/App/App */ "./src/components/App/App.js");
 
- // import './bootstrap.min.css';
-// import '../src/components/ChatApp/ChatApp.css';
-// import '../src/components/NavBar/NavBar.css';
-// import '../src/components/Footer/Footer.css';
-// import '../src/components/LandingPage/LandingPage.css'
-// import '../src/components/Signup/Signup.css';
-// import '../src/components/Login/Login.css';
-// import '../src/components/Howitworks/Howitworks.css'
 
  // import * as serviceWorker from './serviceWorker';
 

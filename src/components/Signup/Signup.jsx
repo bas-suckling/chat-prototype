@@ -42,17 +42,17 @@ class Signup extends React.Component {
                         <p> Use the button below to randomly generate <br/> a username.</p> 
                             <br/>
                             <div className="form-group">
-                                <input value={this.state.username} name="username" className="form-control" id="inputUsername" placeholder="Username" autocomplete="off"/>
+                                <input value={this.state.username} name="username" className="form-control" id="inputUsername" placeholder="Username" autoComplete="off"/>
                             </div>
                             < div className="form-group">
                                 <button onClick={this.generate} className="btn btn-outline-light btn-lg btn-block">Generate Username</button>
                                 <br/>
                             </div>
                             <div className="form-group">
-                                <input name="password" type="password" value={this.state.password} onChange={this.handleChange} className="form-control" id="inputPassword" placeholder="Password" autocomplete="off"/>
+                                <input name="password" type="password" value={this.state.password} onChange={this.handleChange} className="form-control" id="inputPassword" placeholder="Password" autoComplete="off"/>
                                 <br/>
                             </div>
-                            <button type="" className="btn btn-outline-light btn-lg btn-block">Sign Up</button>
+                            <button className="btn btn-outline-light btn-lg btn-block">Sign Up</button>
                     </form>
                 </section>
             </section>

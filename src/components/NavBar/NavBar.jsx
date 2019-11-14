@@ -1,13 +1,12 @@
 import React from "react"
 import {Link}  from 'react-router-dom'
-// import './NavBar.css'
 
 export default function NavBar() {
 
     return (
         <>
         <div className="nav-container">
-            <nav className="navbar navbar-expand-lg navbar-dark" style={{'padding-left':0+'px'}}>
+            <nav className="navbar navbar-expand-lg navbar-dark" style={{'paddingLeft':0+'px'}}>
                 <Link className="navbar-brand" to="/">Shhh.</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks"
                     aria-controls="navbarlinks" aria-expanded="false" aria-label="Toggle navigation">
