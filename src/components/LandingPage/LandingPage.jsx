@@ -34,7 +34,7 @@ export default function LandingPage() {
                     <div className="featureBox col-lg-4">
                         <i className="fas fa-user-secret fa-4x icons"></i>
                         <h3>No Personal Information Required</h3>
-                        <p>New users can generate random usernames.</p>
+                        <p>Users are only indentified by randomly generated usernames.</p>
                     </div>
                     <div className="featureBox col-lg-4">
                         <i className="fas fa-trash-alt fa-4x icons" ></i>
