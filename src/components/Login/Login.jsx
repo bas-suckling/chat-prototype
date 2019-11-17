@@ -27,11 +27,10 @@ class Login extends React.Component {
                             <div className="form-group">
                                 <a className="navbar-brand" href="/">Shhh.</a>
                                 <br />
-                                <input name="username" type="username" className="form-control" id="inputUsername" 
-                                    placeholder="Username" onChange={this.handleChange} value={this.state.username} />
+                                <input name="username" type="username" className="form-control" autoComplete="off" id="inputUsername" placeholder="Username" onChange={this.handleChange} value={this.state.username} />
                             </div>
                             <div className="form-group">
-                                <input name="password" type="password" className="form-control" id="inputPassword" placeholder="Password" onChange={this.handleChange} value={this.state.password}/>
+                                <input name="password" type="password" className="form-control" autoComplete="off" id="inputPassword" placeholder="Password" onChange={this.handleChange} value={this.state.password}/>
                                 <br />
                             </div>
                             <button type="submit" className="btn btn-outline-light btn-lg btn-block">Login</button>
