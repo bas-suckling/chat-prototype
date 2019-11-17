@@ -29,7 +29,7 @@ export default function LandingPage() {
                     <div className="featureBox col-lg-4">
                         <i className="fas fa-lock fa-4x icons"></i>
                         <h3>End to End Encryption</h3>
-                        <p>Messages are protected using modern end to end and AES techniques.</p>
+                        <p>Messages are protected using modern encryption techniques.</p>
                     </div>
                     <div className="featureBox col-lg-4">
                         <i className="fas fa-user-secret fa-4x icons"></i>
