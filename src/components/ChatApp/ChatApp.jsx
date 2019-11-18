@@ -5,6 +5,7 @@ import crypto from './cryptoFunctions'
 function isEmpty(obj) {
     return Object.keys(obj).length === 0;
 }
+  
 
 export default function ChatApp() {
 
@@ -18,6 +19,7 @@ export default function ChatApp() {
     const [secretKey, changeSecretKey] = React.useState('')
 
 
+    
     return (
         <>
             <div id="chatWindow">
@@ -96,3 +98,4 @@ function decrypt(chat, secretKey) {
         return chat.msg
     }
 }
+
