@@ -1,11 +1,12 @@
 import React from "react"
+import { checkLogin } from '../api'
 
 class Login extends React.Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            username: 'placeholder',
+            username: '',
             password: ''
         }
     }
@@ -13,17 +14,22 @@ class Login extends React.Component {
 
     handleChange = (event) => {
         this.setState({
-            [event.target]: event.target.value,
+            [event.target.name]: event.target.value,
         })
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault()
+        checkLogin(this.state)
+        .then()
+    }
 
     render() {
         return (
             <>
                 <section className="container-fluid form-layout">
                     <section className="row justify-content-center">
-                        <form className="form-container" id="form-login" action={``} method="POST">
+                        <form className="form-container" id="form-login" method="POST">
                             <div className="form-group">
                                 <a className="navbar-brand" href="/">Shhh.</a>
                                 <br />
@@ -33,7 +39,7 @@ class Login extends React.Component {
                                 <input name="password" type="password" className="form-control" autoComplete="off" id="inputPassword" placeholder="Password" onChange={this.handleChange} value={this.state.password}/>
                                 <br />
                             </div>
-                            <button type="submit" className="btn btn-outline-light btn-lg btn-block">Login</button>
+                            <button type="submit" className="btn btn-outline-light btn-lg btn-block" onClick={this.handleSubmit}>Login</button>
                         </form>
                     </section>
                 </section>

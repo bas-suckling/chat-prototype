@@ -31,7 +31,9 @@ class Signup extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         addNewUser(this.state)
-        .then()
+        .then(() => {
+            this.props.history.push('/')
+        })
     }
 
 
@@ -47,7 +49,7 @@ class Signup extends React.Component {
                                 <input value={this.state.username} name="username" className="form-control" id="inputUsername" placeholder="Username" autoComplete="off"/>
                             </div>
                             < div className="form-group">
-                                <button onClick={this.generate} className="btn btn-outline-light btn-lg btn-block">Generate Username</button>
+                                <button type="button" onClick={this.generate} className="btn btn-outline-light btn-lg btn-block">Generate Username</button>
                                 <br/>
                             </div>
                             <div className="form-group">

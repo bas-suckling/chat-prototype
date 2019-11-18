@@ -59,8 +59,7 @@ export default function ChatApp() {
                                 <button
                                     onClick={() => {
                                         sendChatAction({ from: user, msg: crypto.encrypt(textValue, crypto.hash(secretKey)), topic: activeTopic })
-                                        // sendChatAction({from: user, msg: textValue, topic: activeTopic})
-                                        // changeTextValue('')
+                                        changeTextValue('')
                                     }}
                                     type="submit"
                                     id="sendButton"

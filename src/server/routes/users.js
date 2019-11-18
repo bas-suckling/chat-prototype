@@ -11,12 +11,21 @@ router.get('/', (req, res) => {
   res.send()
 })
 
-
-
 router.post('/', (req, res) => {
     db.addNewUser(req.body)
     .then(res.json)
     res.send('User added successfully')  
   })
+
+router.post('/login', (req, res) => {
+  db.addNewUser(req.body)
+  .then(res.json)
+  res.send('User added successfully')  
+})
+
+
+
+
+
 
 module.exports = router

@@ -6,3 +6,10 @@ export function addNewUser(userData) {
     .send(userData)
     .then(response => response.body)
 }
+
+export function checkLogin(userData) {
+    return apiRequest
+    .post('api/v1/users/login')
+    .send(userData)
+    .then(response => response.body)
+}
