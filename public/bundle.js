@@ -70072,7 +70072,7 @@ function LandingPage() {
     className: "featureBox col-lg-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-lock fa-4x icons"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "End to End Encryption"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Messages are protected using modern end to end and AES techniques.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "End to End Encryption"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Messages are protected using modern encryption techniques.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "featureBox col-lg-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-user-secret fa-4x icons"
