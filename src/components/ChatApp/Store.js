@@ -27,8 +27,8 @@ export const CTX = React.createContext()
 const initState = {
     "Encrypted Chat": [
                 {from: '', msg: ""}
-            ]
-}
+            ],
+    }
 
 
 function reducer(state, action) {

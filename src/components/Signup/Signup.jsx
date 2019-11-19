@@ -46,7 +46,9 @@ class Signup extends React.Component {
                     button: "Cool Beans"})
             }
         })
-        
+        this.setState({
+            password: ''
+        })
     }
 
 
