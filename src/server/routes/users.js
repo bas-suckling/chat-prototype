@@ -16,7 +16,7 @@ router.post('/', (req, res) => {
   db.checkUsername(req.body)
     .then(user => {
       if (user == undefined) {
-        db.addNewUser()
+        db.addNewUser(req.body)
           .then(
             user => {
               console.log(user.username + 'is not taken')
@@ -29,6 +29,7 @@ router.post('/', (req, res) => {
       }
     })
 })
+
 
 router.post('/login', (req, res) => {
   let loginFlag = false
