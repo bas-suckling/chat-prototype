@@ -1,6 +1,7 @@
 let app = require('./server');
 let http = require('http').createServer(app);
 let io = require('socket.io')(http)
+const port = process.env.PORT || 3001
 
 io.on('connection', function(socket){
     console.log('a user connected');
@@ -10,6 +11,6 @@ io.on('connection', function(socket){
     })
 })
 
-http.listen(3001, function(){
-  console.log('listening on *:3001');
+http.listen(port, function(){
+  console.log('listening on : ', port);
 });

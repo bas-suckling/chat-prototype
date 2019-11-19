@@ -16,6 +16,7 @@
     "knex": "^0.20.1",
     "nodemon": "^1.19.4",
     "path": "^0.12.7",
+    "pg": "^7.13.0",
     "random-username-generator": "^1.0.4",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -35,7 +36,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "webpack && knex migrate:latest"
   },
   "babel": {
     "presets": [
