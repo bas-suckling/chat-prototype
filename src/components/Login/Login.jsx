@@ -21,7 +21,20 @@ class Login extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         checkLogin(this.state)
-        .then()
+        .then((res) => {
+            if (res == true) {
+            swal({
+                icon: "success",
+                text: "Nice! You are logged in.",
+                button: "Cool Beans"})
+            this.props.history.push('/chat')
+            } else {
+                swal({
+                    icon: "error",
+                    text: "Invalid username or password.",
+                    button: "Cool Beans"})
+            }
+        })
     }
 
     render() {

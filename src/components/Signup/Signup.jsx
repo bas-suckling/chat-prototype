@@ -1,6 +1,7 @@
 import React from "react"
 import generateUsername from './generateUsername'
 import { addNewUser } from '../api'
+import swal from 'sweetalert'
 
 class Signup extends React.Component {
     constructor(props) {
@@ -24,16 +25,28 @@ class Signup extends React.Component {
 
     handleChange = (event) => {
         this.setState({
-            password: event.target.value
+            [event.target.name]: event.target.value,
         })
     }
 
     handleSubmit = (event) => {
         event.preventDefault()
         addNewUser(this.state)
-        .then(() => {
-            this.props.history.push('/')
+        .then((res) => {
+            if (res == true) {
+            swal({
+                icon: "success",
+                text: "Account Created Succesfully, Please Login",
+                button: "Cool Beans"})
+                // this.props.history.push('/')
+            } else {
+                swal({
+                    icon: "error",
+                    text: "Username already exists, please try again.",
+                    button: "Cool Beans"})
+            }
         })
+        
     }
 
 
@@ -46,7 +59,7 @@ class Signup extends React.Component {
                         <p> Use the button below to randomly generate <br/> a username.</p> 
                             <br/>
                             <div className="form-group">
-                                <input value={this.state.username} name="username" className="form-control" id="inputUsername" placeholder="Username" autoComplete="off"/>
+                                <input value={this.state.username} onChange={this.handleChange} name="username" className="form-control" id="inputUsername" placeholder="Username" autoComplete="off"/>
                             </div>
                             < div className="form-group">
                                 <button type="button" onClick={this.generate} className="btn btn-outline-light btn-lg btn-block">Generate Username</button>
