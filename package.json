@@ -33,7 +33,7 @@
   },
   "scripts": {
     "dev": "nodemon ./src/server/index.js & webpack --watch",
-    "start": "node server",
+    "start": "node src/server",
     "test": "react-scripts test",
     "postinstall": "webpack && knex migrate:latest"
   },
