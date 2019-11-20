@@ -69906,7 +69906,7 @@ function sendChatAction(value) {
       dispatch = _React$useReducer2[1];
 
   if (!socket) {
-    socket = socket_io_client__WEBPACK_IMPORTED_MODULE_1___default()(':3001');
+    socket = socket_io_client__WEBPACK_IMPORTED_MODULE_1___default()('/');
     socket.on('chat message', function (msg) {
       dispatch({
         type: 'RECEIVE_MESSAGE',
