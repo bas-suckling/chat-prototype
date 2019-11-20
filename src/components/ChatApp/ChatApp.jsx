@@ -22,6 +22,8 @@ export default function ChatApp() {
     
     return (
         <>
+        <canvas>
+        </canvas>
             <div id="chatWindow">
                 <div className="row">
                     <div className="col-sm-3">
