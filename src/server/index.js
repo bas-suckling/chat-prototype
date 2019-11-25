@@ -1,3 +1,6 @@
+const err = require('dotenv').config()
+console.log(err)
+
 let app = require('./server');
 let http = require('http').createServer(app);
 let io = require('socket.io')(http)

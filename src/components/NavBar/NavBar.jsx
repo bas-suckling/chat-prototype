@@ -19,7 +19,7 @@ export default function NavBar() {
                             <Link className="nav-link" to="/signup">Sign Up</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="login">Login</Link>
+                            <Link className="nav-link" to="signin">Login</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/howitworks">How it Works</Link>

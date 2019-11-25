@@ -12,11 +12,11 @@ module.exports = {
     generateHash
 }
 
-function generateHash(text) {
-    let hashKey = crypto.createHash('sha256')
-        .update(text)
+function generateHash(plainText) {
+    let hash = crypto.createHash('sha256')
+        .update(plainText)
         .digest('hex');
-    return hashKey.substring(0, 32)
+    return hash
 }
 
 function createUser (user, db = connection) {

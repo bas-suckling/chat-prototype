@@ -1,6 +1,6 @@
 import React from "react"
 import generateUsername from './generateUsername'
-import { addNewUser } from '../api'
+// import { addNewUser } from '../api'
 import swal from 'sweetalert'
 import { register, isAuthenticated } from 'authenticare/client'
 
@@ -28,7 +28,11 @@ class Signup extends React.Component {
         })
     }
 
+
+    test() {}
+
     handleSubmit = (event) => {
+        console.log(process.env.BASE_API_URL)
         event.preventDefault()
         register({
             username: this.state.username,

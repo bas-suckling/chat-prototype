@@ -70502,7 +70502,7 @@ function NavBar() {
     className: "nav-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "nav-link",
-    to: "login"
+    to: "signin"
   }, "Login")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -70522,10 +70522,13 @@ function NavBar() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SignIn; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SignIn; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../api */ "./src/components/api.js");
+/* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! authenticare/client */ "./node_modules/authenticare/client/index.js");
+/* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(authenticare_client__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../api */ "./src/components/api.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_api__WEBPACK_IMPORTED_MODULE_2__);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -70543,12 +70546,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var isAuthenticated = function isAuthenticated() {
-  return true;
-};
-
-var signIn = function signIn() {};
-
 function SignIn(props) {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     username: '',
@@ -70564,14 +70561,14 @@ function SignIn(props) {
 
   var handleSubmit = function handleSubmit() {
     event.preventDefault();
-    signIn({
+    Object(authenticare_client__WEBPACK_IMPORTED_MODULE_1__["signIn"])({
       username: form.username,
       password: form.password
     }, {
-      baseUrl: process.env.BASE_API_URL // see .env and webpack.config.js
+      baseUrl: "http://localhost:3001/api/v1" // see .env and webpack.config.js
 
     }).then(function (token) {
-      if (isAuthenticated()) {
+      if (Object(authenticare_client__WEBPACK_IMPORTED_MODULE_1__["isAuthenticated"])()) {
         props.history.push('/');
       }
     });
@@ -70650,7 +70647,6 @@ function SignIn(props) {
      //         })
      //     } */
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -70663,15 +70659,14 @@ function SignIn(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _generateUsername__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./generateUsername */ "./src/components/Signup/generateUsername.js");
 /* harmony import */ var _generateUsername__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_generateUsername__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../api */ "./src/components/api.js");
-/* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert */ "./node_modules/sweetalert/dist/sweetalert.min.js");
-/* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! authenticare/client */ "./node_modules/authenticare/client/index.js");
-/* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(authenticare_client__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! sweetalert */ "./node_modules/sweetalert/dist/sweetalert.min.js");
+/* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(sweetalert__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! authenticare/client */ "./node_modules/authenticare/client/index.js");
+/* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(authenticare_client__WEBPACK_IMPORTED_MODULE_3__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -70693,7 +70688,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-
+ // import { addNewUser } from '../api'
 
 
 
@@ -70721,16 +70716,17 @@ function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleSubmit", function (event) {
+      console.log("http://localhost:3001/api/v1");
       event.preventDefault();
-      Object(authenticare_client__WEBPACK_IMPORTED_MODULE_4__["register"])({
+      Object(authenticare_client__WEBPACK_IMPORTED_MODULE_3__["register"])({
         username: _this.state.username,
         password: _this.state.password
       }, {
-        baseUrl: process.env.BASE_API_URL // see .env and webpack.config.js
+        baseUrl: "http://localhost:3001/api/v1" // see .env and webpack.config.js
 
       }).then(function (token) {
-        if (Object(authenticare_client__WEBPACK_IMPORTED_MODULE_4__["isAuthenticated"])()) {
-          sweetalert__WEBPACK_IMPORTED_MODULE_3___default()({
+        if (Object(authenticare_client__WEBPACK_IMPORTED_MODULE_3__["isAuthenticated"])()) {
+          sweetalert__WEBPACK_IMPORTED_MODULE_2___default()({
             icon: "success",
             text: "Account Created Succesfully, Please Login",
             button: "Cool Beans"
@@ -70750,6 +70746,9 @@ function (_React$Component) {
   }
 
   _createClass(Signup, [{
+    key: "test",
+    value: function test() {}
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -70815,7 +70814,6 @@ function (_React$Component) {
 //         button: "Cool Beans"
 //     })
 // }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -70840,26 +70838,22 @@ module.exports = generateUsername;
 /*!*******************************!*\
   !*** ./src/components/api.js ***!
   \*******************************/
-/*! exports provided: addNewUser, checkLogin */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addNewUser", function() { return addNewUser; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkLogin", function() { return checkLogin; });
-/* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! superagent */ "./node_modules/superagent/lib/client.js");
-/* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(superagent__WEBPACK_IMPORTED_MODULE_0__);
-
-function addNewUser(userData) {
-  return superagent__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/v1/users').send(userData).then(function (res) {
-    return res.body;
-  });
-}
-function checkLogin(userData) {
-  return superagent__WEBPACK_IMPORTED_MODULE_0___default.a.post('api/v1/users/login').send(userData).then(function (res) {
-    return res.body;
-  });
-}
+// import apiRequest from 'superagent'
+// export function addNewUser(userData) {
+//     return apiRequest
+//     .post('/api/v1/users')
+//     .send(userData)
+//     .then(res => res.body)
+// }
+// export function checkLogin(userData) {
+//     return apiRequest
+//     .post('api/v1/users/login')
+//     .send(userData)
+//     .then(res => res.body)
+// }
 
 /***/ }),
 

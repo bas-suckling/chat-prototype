@@ -1,8 +1,7 @@
 import React, {useState} from "react"
+import { signIn, isAuthenticated } from 'authenticare/client'
 import { checkLogin } from '../api'
 
-const isAuthenticated = () => true
-const signIn = () => {}
 
 export default function SignIn(props) {
     const [form, setForm] = useState({
