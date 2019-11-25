@@ -28,12 +28,9 @@ class Signup extends React.Component {
         })
     }
 
-
-    test() {}
-
     handleSubmit = (event) => {
-        console.log(process.env.BASE_API_URL)
         event.preventDefault()
+        console.log(process.env.BASE_API_URL)
         register({
             username: this.state.username,
             password: this.state.password

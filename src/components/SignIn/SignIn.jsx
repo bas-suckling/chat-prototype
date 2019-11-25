@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import { signIn, isAuthenticated } from 'authenticare/client'
-import { checkLogin } from '../api'
+// import { checkLogin } from '../api'
 
 
 export default function SignIn(props) {
@@ -16,17 +16,21 @@ export default function SignIn(props) {
         })
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (event) => {
         event.preventDefault()
+        console.log(form)
+        console.log('before signIn test' )
         signIn({
             username: form.username,
             password: form.password
         }, {
-            baseUrl: process.env.BASE_API_URL // see .env and webpack.config.js
-        })
+            baseUrl: process.env.BASE_API_URL
+        }
+        )
             .then((token) => {
+                console.log('did i make it this far?')
                 if (isAuthenticated()) {
-                    props.history.push('/')
+                    props.history.push('/chat')
                 }
             })
     }
@@ -34,7 +38,7 @@ export default function SignIn(props) {
         <>
             <section className="container-fluid form-layout">
                 <section className="row justify-content-center">
-                    <form className="form-container" id="form-login" method="POST">
+                    <form className="form-container" id="form-login" method="">
                         <div className="form-group">
                             <a className="navbar-brand" href="/">Shhh.</a>
                               <br />

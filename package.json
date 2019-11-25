@@ -12,7 +12,6 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.5",
-    "cors": "^2.8.5",
     "dotenv": "^8.1.0",
     "dotenv-webpack": "^1.7.0",
     "express": "^4.17.1",
@@ -35,7 +34,7 @@
     "webpack-dev-server": "^3.2.1"
   },
   "scripts": {
-    "dev": "nodemon ./src/server/server.js & webpack --watch",
+    "dev": "nodemon src/server & webpack --watch",
     "start": "node src/server",
     "test": "react-scripts test",
     "postinstall": "webpack && knex migrate:latest"

@@ -54784,7 +54784,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70527,8 +70527,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! authenticare/client */ "./node_modules/authenticare/client/index.js");
 /* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(authenticare_client__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../api */ "./src/components/api.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_api__WEBPACK_IMPORTED_MODULE_2__);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -70544,7 +70542,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
-
+ // import { checkLogin } from '../api'
 
 function SignIn(props) {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
@@ -70559,17 +70557,20 @@ function SignIn(props) {
     setForm(_objectSpread({}, form, _defineProperty({}, e.target.name, e.target.value)));
   };
 
-  var handleSubmit = function handleSubmit() {
+  var handleSubmit = function handleSubmit(event) {
     event.preventDefault();
+    console.log(form);
+    console.log('before signIn test');
     Object(authenticare_client__WEBPACK_IMPORTED_MODULE_1__["signIn"])({
       username: form.username,
       password: form.password
     }, {
-      baseUrl: "http://localhost:3001/api/v1" // see .env and webpack.config.js
-
+      baseUrl: "http://localhost:3001/api/v1"
     }).then(function (token) {
+      console.log('did i make it this far?');
+
       if (Object(authenticare_client__WEBPACK_IMPORTED_MODULE_1__["isAuthenticated"])()) {
-        props.history.push('/');
+        props.history.push('/chat');
       }
     });
   };
@@ -70581,7 +70582,7 @@ function SignIn(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: "form-container",
     id: "form-login",
-    method: "POST"
+    method: ""
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -70716,8 +70717,8 @@ function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleSubmit", function (event) {
-      console.log("http://localhost:3001/api/v1");
       event.preventDefault();
+      console.log("http://localhost:3001/api/v1");
       Object(authenticare_client__WEBPACK_IMPORTED_MODULE_3__["register"])({
         username: _this.state.username,
         password: _this.state.password
@@ -70746,9 +70747,6 @@ function (_React$Component) {
   }
 
   _createClass(Signup, [{
-    key: "test",
-    value: function test() {}
-  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -70831,29 +70829,6 @@ function generateUsername() {
 }
 
 module.exports = generateUsername;
-
-/***/ }),
-
-/***/ "./src/components/api.js":
-/*!*******************************!*\
-  !*** ./src/components/api.js ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// import apiRequest from 'superagent'
-// export function addNewUser(userData) {
-//     return apiRequest
-//     .post('/api/v1/users')
-//     .send(userData)
-//     .then(res => res.body)
-// }
-// export function checkLogin(userData) {
-//     return apiRequest
-//     .post('api/v1/users/login')
-//     .send(userData)
-//     .then(res => res.body)
-// }
 
 /***/ }),
 
