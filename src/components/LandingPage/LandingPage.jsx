@@ -12,7 +12,7 @@ export default function LandingPage() {
                             <div className="col-lg-6">
                                 <h1>End to End encrypted messaging not even an authoritarian government can crack.</h1>
                                 <Link to="/signup"><button type="button" className="btn btn-outline-light btn-lg downloadButton">Sign Up</button></Link>
-                                <Link to="/login"><button type="button" className="btn btn-outline-light btn-lg downloadButton">Login</button></Link>
+                                <Link to="/signin"><button type="button" className="btn btn-outline-light btn-lg downloadButton">Sign In</button></Link>
                             </div>
                             <div className="col-lg-6">
                                 <img src="images/Encrypted-Messaging-Flat-Icon.png" alt="encrypted message" className="titleImage" />

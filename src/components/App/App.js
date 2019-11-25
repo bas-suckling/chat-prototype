@@ -6,8 +6,8 @@ import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer'
 import LandingPage from '../LandingPage/LandingPage'
 import Signup from  '../Signup/Signup'
-import Login from '../Login/Login'
 import Howitworks from '../Howitworks/Howitworks'
+import SignIn from '../SignIn/SignIn';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <NavBar/>
         <Route exact path='/' component={LandingPage}/>
         <Route exact path="/signup" component={Signup}/>
-        <Route exact path="/login" component={Login}/>
+        <Route exact path="/signin" component={SignIn}/>
         <Route exact path="/howitworks" component={Howitworks}/>
         <Route exact path="/chat" render={props => {
           return (

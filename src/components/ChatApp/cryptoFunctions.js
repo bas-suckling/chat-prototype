@@ -22,7 +22,7 @@ function decrypt(text, key) {
 }
 
 function hash(text) {
-    let hashKey = crypto.createHash('sha1')
+    let hashKey = crypto.createHash('sha256')
         .update(text)
         .digest('hex');
     return hashKey.substring(0, 32)
