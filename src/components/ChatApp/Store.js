@@ -28,6 +28,12 @@ const initState = {
     "Encrypted Chat": [
                 {from: '', msg: ""}
             ],
+            "Cass's Secret Chat Room": [
+                {from: '', msg: ""}
+            ],
+            "Non Encrypted Chat": [
+                {from: '', msg: ""}
+            ],
     }
 
 

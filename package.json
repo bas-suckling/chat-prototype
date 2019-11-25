@@ -34,7 +34,7 @@
     "webpack-dev-server": "^3.2.1"
   },
   "scripts": {
-    "dev": "nodemon src/server & webpack --watch",
+    "dev": "nodemon server & webpack --watch",
     "start": "node src/server",
     "test": "react-scripts test",
     "postinstall": "webpack && knex migrate:latest"
