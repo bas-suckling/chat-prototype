@@ -70510,11 +70510,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_App_App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/App/App */ "./src/components/App/App.js");
 
 
- // import * as serviceWorker from './serviceWorker';
 
 document.addEventListener('DOMContentLoaded', function () {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_App_App__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById('root'));
-}); // serviceWorker.unregister();
+});
 
 /***/ }),
 
