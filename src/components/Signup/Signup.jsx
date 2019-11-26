@@ -1,7 +1,6 @@
 import React from "react"
 import generateUsername from './generateUsername'
-// import { addNewUser } from '../api'
-import swal from 'sweetalert'
+import Swal from 'sweetalert2'
 import { register, isAuthenticated } from 'authenticare/client'
 
 
@@ -30,7 +29,6 @@ class Signup extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log(process.env.BASE_API_URL)
         register({
             username: this.state.username,
             password: this.state.password
@@ -40,14 +38,18 @@ class Signup extends React.Component {
             })
             .then((token) => {
                 if (isAuthenticated()) {
-                    swal({
-                        icon: "success",
-                        text: "Account Created Succesfully, Please Login",
-                        button: "Cool Beans"
-                    })
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Account Created Succesfully'
+                      })
                     this.props.history.push('/signin')
+                } else { 
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Username not available, please try again'
+                      })
                 }
-            })
+            })      
     }
 
     render() {

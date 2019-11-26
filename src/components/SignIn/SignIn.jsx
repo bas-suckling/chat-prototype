@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import { signIn, isAuthenticated } from 'authenticare/client'
-// import { checkLogin } from '../api'
+import Swal from 'sweetalert2'
 
 
 export default function SignIn(props) {
@@ -18,19 +18,26 @@ export default function SignIn(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log(form)
-        console.log('before signIn test' )
         signIn({
             username: form.username,
             password: form.password
         }, {
             baseUrl: process.env.BASE_API_URL
-        }
-        )
+        })
             .then((token) => {
-                console.log('did i make it this far?')
                 if (isAuthenticated()) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Successfully signed in'
+                      })
+
                     props.history.push('/chat')
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Invalid username or password'
+                      })
+                    props.history.push('/signin')
                 }
             })
     }
