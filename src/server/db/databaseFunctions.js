@@ -5,6 +5,9 @@ const connection = require ('knex')(config)
 
 const crypto = require('crypto')
 
+const { generateHash } = require('authenticare/server')
+
+
 module.exports = {
     createUser,
     userExists,
@@ -12,14 +15,15 @@ module.exports = {
     generateHash
 }
 
-function generateHash(plainText) {
-    let hash = crypto.createHash('sha256')
-        .update(plainText)
-        .digest('hex');
-    return hash
-}
+// function generateHash(plainText) {
+//     let hash = crypto.createHash('sha256')
+//         .update(plainText)
+//         .digest('hex');
+//     return hash
+// }
 
 function createUser (user, db = connection) {
+  console.log('u', user)
   return userExists(user.username, db)
     .then(exists => {
       if (exists) {
