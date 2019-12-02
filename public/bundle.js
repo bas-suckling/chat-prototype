@@ -54784,7 +54784,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -73380,11 +73380,11 @@ function LandingPage() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container-fluid",
     id: "howItWorks"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "How it Works"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Encryption"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This app uses symetric encrpytion. The shared secret key is hashed using the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "How it Works"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Encryption"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "The shared secret key is hashed using the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://en.wikipedia.org/wiki/SHA-2"
-  }, "Secure Hash Algorithm 256"), " method. The message is then encrypted using the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "Secure Hash Algorithm 256"), " method. The plaintext message is then encrypted using the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://en.wikipedia.org/wiki/Advanced_Encryption_Standard"
-  }, "Advanced Encryption Standard 256"), " method. Once the message has been encrypted, it is sent via the server to the other user, who decrypts the message at their end using the same method."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This method of end to end encryption requires both users to know each other's secret keys. It is the method used for encryption by governments across the world, and the encrypted text is considered unbreakable using current code breaking methods. A far simpler target is the unencrypted message at each end of the app, so keep an eye on who is standing behind you, or who has access to your device!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Chat Application"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "The application was built using Node.js, React and the chat functionality is facilitated using the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "Advanced Encryption Standard 256"), " method. Once the message has been encrypted, it is sent via the server to the other user, who decrypts the message at their end using the same method."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This is a simple implementation of end to end encryption which requires both users to know each other's secret keys in advance. Once encrypted, the message is considered unbreakable using current code breaking methods. A far simpler target is the unencrypted message at each end of the app, so keep an eye on who is standing behind you, or who has access to your device!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Chat Application"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "The application was built using Node.js, React and the chat functionality is facilitated using the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://socket.io/"
   }, "Socket.io"), " library.")));
 }
@@ -73515,7 +73515,12 @@ function NavBar() {
     id: "navbarLinks"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "navbar-nav ml-auto"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfNotAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "nav-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    className: "nav-link",
+    to: "/howitworks"
+  }, "How it Works")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfNotAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "nav-link",
@@ -73527,13 +73532,9 @@ function NavBar() {
     to: "/signin"
   }, "Login"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "nav-link",
-    to: "/"
-  }, "Logout"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link",
-    to: "/howitworks"
-  }, "How it Works")))))));
+    to: "/",
+    onClick: authenticare_client__WEBPACK_IMPORTED_MODULE_2__["logOff"]
+  }, "Logout"))))))));
 }
 
 /***/ }),
@@ -73590,7 +73591,7 @@ function SignIn(props) {
       username: form.username,
       password: form.password
     }, {
-      baseUrl: "http://localhost:3000"
+      baseUrl: "http://localhost:3001/api/v1"
     }).then(function (token) {
       if (Object(authenticare_client__WEBPACK_IMPORTED_MODULE_1__["isAuthenticated"])()) {
         sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
@@ -73754,7 +73755,7 @@ function (_React$Component) {
         username: _this.state.username,
         password: _this.state.password
       }, {
-        baseUrl: "http://localhost:3000" // see .env and webpack.config.js
+        baseUrl: "http://localhost:3001/api/v1" // see .env and webpack.config.js
 
       }).then(function (token) {
         if (Object(authenticare_client__WEBPACK_IMPORTED_MODULE_3__["isAuthenticated"])()) {
@@ -73763,7 +73764,7 @@ function (_React$Component) {
             title: 'Account Created Succesfully'
           });
 
-          _this.props.history.push('/signin');
+          _this.props.history.push('/chat');
         } else {
           sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
             icon: 'error',

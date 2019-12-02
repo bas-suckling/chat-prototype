@@ -42,7 +42,7 @@ class Signup extends React.Component {
                         icon: 'success',
                         title: 'Account Created Succesfully'
                       })
-                    this.props.history.push('/signin')
+                    this.props.history.push('/chat')
                 } else { 
                     Swal.fire({
                         icon: 'error',

@@ -23,6 +23,9 @@ export default function NavBar() {
 
                     <div className="collapse navbar-collapse" id="navbarLinks">
                         <ul className="navbar-nav ml-auto">
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/howitworks">How it Works</Link>
+                            </li>
                             <IfNotAuthenticated>
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/signup">Sign Up</Link>
@@ -33,12 +36,10 @@ export default function NavBar() {
                             </IfNotAuthenticated>
                             <IfAuthenticated>
                                 <li>
-                                    <Link className="nav-link" to="/">Logout</Link>
+                                    <Link className="nav-link" to="/" onClick={logOff}>Logout</Link>
                                 </li>
                             </IfAuthenticated>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/howitworks">How it Works</Link>
-                            </li>
+                            
                         </ul>
                     </div>
                 </nav>
