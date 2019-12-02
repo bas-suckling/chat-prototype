@@ -8,12 +8,16 @@ import LandingPage from '../LandingPage/LandingPage'
 import Signup from  '../Signup/Signup'
 import Howitworks from '../Howitworks/Howitworks'
 import SignIn from '../SignIn/SignIn';
+import { isAuthenticated } from 'authenticare/client'
 
+//make classbaed component, component should update - compare current to past props
+
+//add state of logged in, pass callback refresh or loggedin or out and pass to login and signup components
 function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar/>
+        <NavBar loggedIn ={isAuthenticated()}/>
         <Route exact path='/' component={LandingPage}/>
         <Route exact path="/signup" component={Signup}/>
         <Route exact path="/signin" component={SignIn}/>

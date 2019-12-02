@@ -72956,6 +72956,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Signup_Signup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Signup/Signup */ "./src/components/Signup/Signup.jsx");
 /* harmony import */ var _Howitworks_Howitworks__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Howitworks/Howitworks */ "./src/components/Howitworks/Howitworks.jsx");
 /* harmony import */ var _SignIn_SignIn__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../SignIn/SignIn */ "./src/components/SignIn/SignIn.jsx");
+/* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! authenticare/client */ "./node_modules/authenticare/client/index.js");
+/* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(authenticare_client__WEBPACK_IMPORTED_MODULE_10__);
 
 
 
@@ -72966,11 +72968,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ //make classbaed component, component should update - compare current to past props
+//add state of logged in, pass callback refresh or loggedin or out and pass to login and signup components
 
 function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["HashRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "App"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    loggedIn: Object(authenticare_client__WEBPACK_IMPORTED_MODULE_10__["isAuthenticated"])()
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/",
     component: _LandingPage_LandingPage__WEBPACK_IMPORTED_MODULE_6__["default"]
@@ -73486,7 +73492,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function NavBar() {
+function NavBar(props) {
+  console.log(props);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "nav-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
