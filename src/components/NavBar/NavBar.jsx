@@ -5,8 +5,7 @@ import { logOff } from 'authenticare/client'
 import { IfAuthenticated, IfNotAuthenticated } from '../Authenticated/Authenticated'
 
 
-export default function NavBar(props) {
-    console.log(props)
+export default function NavBar() {
     return (
         <>
             <div className="nav-container">

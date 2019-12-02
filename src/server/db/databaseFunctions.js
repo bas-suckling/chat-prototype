@@ -23,7 +23,6 @@ module.exports = {
 // }
 
 function createUser (user, db = connection) {
-  console.log('u', user)
   return userExists(user.username, db)
     .then(exists => {
       if (exists) {
@@ -37,7 +36,7 @@ function createUser (user, db = connection) {
 }
 
 function userExists (username, db = connection) {
-  console.log({username})
+
   return db('users')
     .count('id as n')
     .where('username', username)
@@ -47,7 +46,6 @@ function userExists (username, db = connection) {
 }
 
 function getUserByName (username, db = connection) {
-  console.log(username)
   return db('users')
     .select()
     .where('username', username)

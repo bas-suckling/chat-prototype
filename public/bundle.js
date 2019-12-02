@@ -73492,8 +73492,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function NavBar(props) {
-  console.log(props);
+function NavBar() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "nav-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {

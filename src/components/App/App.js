@@ -13,6 +13,8 @@ import { isAuthenticated } from 'authenticare/client'
 //make classbaed component, component should update - compare current to past props
 
 //add state of logged in, pass callback refresh or loggedin or out and pass to login and signup components
+
+
 function App() {
   return (
     <Router>
