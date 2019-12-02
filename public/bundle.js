@@ -54784,7 +54784,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72999,6 +72999,34 @@ function App() {
 
 /***/ }),
 
+/***/ "./src/components/Authenticated/Authenticated.jsx":
+/*!********************************************************!*\
+  !*** ./src/components/Authenticated/Authenticated.jsx ***!
+  \********************************************************/
+/*! exports provided: IfAuthenticated, IfNotAuthenticated */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IfAuthenticated", function() { return IfAuthenticated; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IfNotAuthenticated", function() { return IfNotAuthenticated; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! authenticare/client */ "./node_modules/authenticare/client/index.js");
+/* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(authenticare_client__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function IfAuthenticated(_ref) {
+  var children = _ref.children;
+  return Object(authenticare_client__WEBPACK_IMPORTED_MODULE_1__["isAuthenticated"])() ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, children) : null;
+}
+function IfNotAuthenticated(_ref2) {
+  var children = _ref2.children;
+  return !Object(authenticare_client__WEBPACK_IMPORTED_MODULE_1__["isAuthenticated"])() ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, children) : null;
+}
+
+/***/ }),
+
 /***/ "./src/components/ChatApp/ChatApp.jsx":
 /*!********************************************!*\
   !*** ./src/components/ChatApp/ChatApp.jsx ***!
@@ -73350,13 +73378,11 @@ __webpack_require__.r(__webpack_exports__);
 
 function LandingPage() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "container-fluid",
+    className: "container-fluid",
     id: "howItWorks"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "How it Works"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Encryption"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Each user supplying a separate secret key. Both keys are hashed using the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "How it Works"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Encryption"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This app uses symetric encrpytion. The shared secret key is hashed using the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://en.wikipedia.org/wiki/SHA-2"
-  }, "Secure Hash Algorithm 256"), " method, and combined using the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"
-  }, "Diffie-Hellman Key Exchange"), " method to create the main encryption key. The message is then encrypted using the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "Secure Hash Algorithm 256"), " method. The message is then encrypted using the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://en.wikipedia.org/wiki/Advanced_Encryption_Standard"
   }, "Advanced Encryption Standard 256"), " method. Once the message has been encrypted, it is sent via the server to the other user, who decrypts the message at their end using the same method."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This method of end to end encryption requires both users to know each other's secret keys. It is the method used for encryption by governments across the world, and the encrypted text is considered unbreakable using current code breaking methods. A far simpler target is the unencrypted message at each end of the app, so keep an eye on who is standing behind you, or who has access to your device!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Chat Application"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "The application was built using Node.js, React and the chat functionality is facilitated using the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://socket.io/"
@@ -73453,6 +73479,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! authenticare/client */ "./node_modules/authenticare/client/index.js");
+/* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(authenticare_client__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Authenticated/Authenticated */ "./src/components/Authenticated/Authenticated.jsx");
+
+
 
 
 function NavBar() {
@@ -73463,10 +73494,13 @@ function NavBar() {
     style: {
       'paddingLeft': 0 + 'px'
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfNotAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "navbar-brand",
     to: "/"
-  }, "Shhh."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "Shhh.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    className: "navbar-brand",
+    to: "#"
+  }, "Shhh.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "navbar-toggler",
     type: "button",
     "data-toggle": "collapse",
@@ -73481,7 +73515,7 @@ function NavBar() {
     id: "navbarLinks"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "navbar-nav ml-auto"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfNotAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "nav-link",
@@ -73490,8 +73524,11 @@ function NavBar() {
     className: "nav-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "nav-link",
-    to: "signin"
-  }, "Login")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    to: "/signin"
+  }, "Login"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    className: "nav-link",
+    to: "/"
+  }, "Logout"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "nav-link",
@@ -73553,7 +73590,7 @@ function SignIn(props) {
       username: form.username,
       password: form.password
     }, {
-      baseUrl: "http://localhost:3001/api/v1"
+      baseUrl: "http://localhost:3000"
     }).then(function (token) {
       if (Object(authenticare_client__WEBPACK_IMPORTED_MODULE_1__["isAuthenticated"])()) {
         sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
@@ -73717,7 +73754,7 @@ function (_React$Component) {
         username: _this.state.username,
         password: _this.state.password
       }, {
-        baseUrl: "http://localhost:3001/api/v1" // see .env and webpack.config.js
+        baseUrl: "http://localhost:3000" // see .env and webpack.config.js
 
       }).then(function (token) {
         if (Object(authenticare_client__WEBPACK_IMPORTED_MODULE_3__["isAuthenticated"])()) {

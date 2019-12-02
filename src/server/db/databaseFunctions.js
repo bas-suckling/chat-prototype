@@ -37,6 +37,7 @@ function createUser (user, db = connection) {
 }
 
 function userExists (username, db = connection) {
+  console.log({username})
   return db('users')
     .count('id as n')
     .where('username', username)

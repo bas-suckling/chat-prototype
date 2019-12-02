@@ -11,7 +11,7 @@ server.use(express.json())
 server.use(express.static(path.join(__dirname, '../../public')))
 
 // server.use('/api/v1/users', users)
-server.use('/api/v1', authRoutes)
+server.use('/', authRoutes)
 
 
 server.get('/', (req, res) => {
