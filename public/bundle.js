@@ -54784,7 +54784,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72993,9 +72993,13 @@ function (_React$Component) {
   _inherits(App, _React$Component);
 
   function App(props) {
+    var _this;
+
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
+    _this.state = {};
+    return _this;
   }
 
   _createClass(App, [{
@@ -73033,28 +73037,7 @@ function (_React$Component) {
   }]);
 
   return App;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); // function App() {
-//   return (
-//     <Router>
-//       <div className="App">
-//         <NavBar loggedIn ={isAuthenticated()}/>
-//         <Route exact path='/' component={LandingPage}/>
-//         <Route exact path="/signup" component={Signup}/>
-//         <Route exact path="/signin" component={SignIn}/>
-//         <Route exact path="/howitworks" component={Howitworks}/>
-//         <Route exact path="/chat" render={props => {
-//           return (
-//             <Store>
-//               <ChatApp />
-//             </Store>
-//           )
-//         }}/>
-//         <Footer/>
-//       </div>
-//     </Router>
-//   );
-// }
-
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
 
@@ -73143,7 +73126,7 @@ function ChatApp() {
       secretKey = _React$useState6[0],
       changeSecretKey = _React$useState6[1];
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("canvas", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "chatWindow"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row"
@@ -73256,22 +73239,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var CTX = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(); // individual messages will be in the following format
-// msg {
-//     from: 'user',
-//     msg: 'hi',
-//     topic: 'general'
-// }
-// state will look like this
-// state {
-//     general: [
-//         {msg}, {msg}, {msg}
-//     ],
-//     topic2: [
-//         {msg}, {msg}, {msg}
-//     ]
-// }
-
+var CTX = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
 var initState = {
   "Encrypted Chat": [{
     from: '',
@@ -73722,8 +73690,9 @@ function SignIn(props) {
         sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
           icon: 'success',
           title: 'Successfully signed in'
+        }).then(function () {
+          return props.history.push('/chat');
         });
-        props.history.push('/chat');
       } else {
         sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
           icon: 'error',

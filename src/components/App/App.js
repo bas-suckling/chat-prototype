@@ -13,9 +13,11 @@ import { IfAuthenticated, IfNotAuthenticated } from '../Authenticated/Authentica
 class App extends React.Component {
   constructor(props){
     super(props)
-    
-}
 
+    this.state={}
+  }
+
+  
   render() {
   return (
     <Router>
@@ -30,7 +32,7 @@ class App extends React.Component {
         <IfAuthenticated>
         <Route exact path="/chat" render={props => {
           return (
-            <Store>
+            <Store >
               <ChatApp />
             </Store>
           )
@@ -42,27 +44,5 @@ class App extends React.Component {
   );
 }
 }
-
-// function App() {
-//   return (
-//     <Router>
-//       <div className="App">
-//         <NavBar loggedIn ={isAuthenticated()}/>
-//         <Route exact path='/' component={LandingPage}/>
-//         <Route exact path="/signup" component={Signup}/>
-//         <Route exact path="/signin" component={SignIn}/>
-//         <Route exact path="/howitworks" component={Howitworks}/>
-//         <Route exact path="/chat" render={props => {
-//           return (
-//             <Store>
-//               <ChatApp />
-//             </Store>
-//           )
-//         }}/>
-//         <Footer/>
-//       </div>
-//     </Router>
-//   );
-// }
 
 export default App;

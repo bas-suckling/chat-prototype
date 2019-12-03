@@ -5,7 +5,7 @@ import crypto from './cryptoFunctions'
 function isEmpty(obj) {
     return Object.keys(obj).length === 0;
 }
-  
+
 
 export default function ChatApp() {
 
@@ -19,11 +19,9 @@ export default function ChatApp() {
     const [secretKey, changeSecretKey] = React.useState('')
 
 
-    
+
     return (
         <>
-        <canvas>
-        </canvas>
             <div id="chatWindow">
                 <div className="row">
                     {/* <div className="col-sm-3">
@@ -44,8 +42,8 @@ export default function ChatApp() {
                             <p className="adminMsg">Admin: Use a shared secret key to encrypt your message.</p>
                             {allChats[activeTopic].map((chat, i) => (
                                 <div className="chatMessage" key={i}>
-                                    {isEmpty(chat.msg)?<p></p>:<p>{chat.from}: {decrypt(chat, secretKey)}</p>}
-                                    
+                                    {isEmpty(chat.msg) ? <p></p> : <p>{chat.from}: {decrypt(chat, secretKey)}</p>}
+
                                     {/* <p>{chat.from}: {chat.msg}</p> */}
                                 </div>
                             ))
@@ -91,7 +89,7 @@ export default function ChatApp() {
 function decrypt(chat, secretKey) {
     try {
         return crypto.decrypt(chat.msg, crypto.hash(secretKey))
-    } 
+    }
     catch (e) {
         return chat.msg
     }

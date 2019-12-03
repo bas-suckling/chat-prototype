@@ -4,9 +4,6 @@ import { logOff } from 'authenticare/client'
 
 import { IfAuthenticated, IfNotAuthenticated } from '../Authenticated/Authenticated'
 
-
-
-
 export default class NavBar extends React.Component {
 
     constructor(props) {

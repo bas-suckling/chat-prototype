@@ -62,8 +62,3 @@ ul {
     }
 }
 
-canvas {
-    display: inline;
-    z-index: -1;
-    position: absolute;
-}

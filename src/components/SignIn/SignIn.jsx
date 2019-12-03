@@ -29,9 +29,9 @@ export default function SignIn(props) {
                     Swal.fire({
                         icon: 'success',
                         title: 'Successfully signed in'
-                      })
+                      }).then(() => props.history.push('/chat'))
 
-                    props.history.push('/chat')
+                    
                 } else {
                     Swal.fire({
                         icon: 'error',

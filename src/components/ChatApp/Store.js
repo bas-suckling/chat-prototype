@@ -3,27 +3,6 @@ import io from 'socket.io-client'
 
 export const CTX = React.createContext()
 
-
-
-
-// individual messages will be in the following format
-    // msg {
-    //     from: 'user',
-    //     msg: 'hi',
-    //     topic: 'general'
-    // }
-
-// state will look like this
-    // state {
-    //     general: [
-    //         {msg}, {msg}, {msg}
-    //     ],
-    //     topic2: [
-    //         {msg}, {msg}, {msg}
-    //     ]
-    // }
-
-
 const initState = {
     "Encrypted Chat": [
                 {from: '', msg: ""}
