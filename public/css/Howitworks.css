@@ -2,7 +2,8 @@
 
 #howItWorks {
     color: white;
-    padding-bottom: 3%;
+    padding-top:5%;
+    padding-bottom: 15%;
     background-color:#000e5a;
 }
 
@@ -13,7 +14,6 @@
 #howItWorks h1{
     font-family: ubuntu;
     font-weight: 900;
-    
     line-height: 1.5;
     color: white;
     padding-bottom: 20px;

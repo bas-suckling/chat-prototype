@@ -1,5 +1,5 @@
 .navbar {
-    padding: 0 0 1% 0;
+    padding: 0 0 0 0;
     font-family: 'Montserrat', sans-serif;
    
 }
@@ -31,7 +31,7 @@
 }
 
 .nav-container {
-    padding: 3% 15% 3% 15%;
+    padding: 1% 15% 1% 15%;
     background-color: #000e5a;
 }
 

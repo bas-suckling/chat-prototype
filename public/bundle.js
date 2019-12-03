@@ -73148,21 +73148,7 @@ function ChatApp() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-sm-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "rooms",
-    className: "window"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, topics.map(function (topic) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-      key: topic
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      onClick: function onClick(e) {
-        return changeActiveTopic(e.target.innerText);
-      },
-      className: "btn btn-light btn-block"
-    }, topic));
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-sm-9"
+    className: "col-sm-12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "messageWall",
     className: "window"
@@ -73415,11 +73401,7 @@ __webpack_require__.r(__webpack_exports__);
 function Footer() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
     id: "footer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\xA9 Copyright 2019 Shhh. We won't tell if you won't."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fab fa-twitter smallIcon"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-envelope smallIcon"
-  })));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Shhh. We won't tell if you won't.")));
 }
 
 /***/ }),
@@ -73543,60 +73525,142 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! authenticare/client */ "./node_modules/authenticare/client/index.js");
 /* harmony import */ var authenticare_client__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(authenticare_client__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Authenticated/Authenticated */ "./src/components/Authenticated/Authenticated.jsx");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
 
 
-function NavBar() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "nav-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: "navbar navbar-expand-lg navbar-dark",
-    style: {
-      'paddingLeft': 0 + 'px'
+
+
+var NavBar =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(NavBar, _React$Component);
+
+  function NavBar(props) {
+    var _this;
+
+    _classCallCheck(this, NavBar);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(NavBar).call(this, props));
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(NavBar, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+        className: "navbar navbar-expand-lg navbar-dark",
+        style: {
+          'paddingLeft': 0 + 'px'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfNotAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "navbar-brand",
+        to: "/"
+      }, "Shhh.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "navbar-brand",
+        to: "/chat"
+      }, "Shhh.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "navbar-toggler",
+        type: "button",
+        "data-toggle": "collapse",
+        "data-target": "#navbarLinks",
+        "aria-controls": "navbarlinks",
+        "aria-expanded": "false",
+        "aria-label": "Toggle navigation"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "navbar-toggler-icon"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "collapse navbar-collapse",
+        id: "navbarLinks"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "navbar-nav ml-auto"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "nav-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "nav-link",
+        to: "/howitworks"
+      }, "How it Works")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfNotAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "nav-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "nav-link",
+        to: "/signup"
+      }, "Sign Up")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "nav-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "nav-link",
+        to: "/signin"
+      }, "Login"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "nav-link",
+        to: "/",
+        onClick: authenticare_client__WEBPACK_IMPORTED_MODULE_2__["logOff"]
+      }, "Logout"))))))));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfNotAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "navbar-brand",
-    to: "/"
-  }, "Shhh.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "navbar-brand",
-    to: "#"
-  }, "Shhh.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "navbar-toggler",
-    type: "button",
-    "data-toggle": "collapse",
-    "data-target": "#navbarLinks",
-    "aria-controls": "navbarlinks",
-    "aria-expanded": "false",
-    "aria-label": "Toggle navigation"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "navbar-toggler-icon"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "collapse navbar-collapse",
-    id: "navbarLinks"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "navbar-nav ml-auto"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link",
-    to: "/howitworks"
-  }, "How it Works")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfNotAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link",
-    to: "/signup"
-  }, "Sign Up")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link",
-    to: "/signin"
-  }, "Login"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Authenticated_Authenticated__WEBPACK_IMPORTED_MODULE_3__["IfAuthenticated"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link",
-    to: "/",
-    onClick: authenticare_client__WEBPACK_IMPORTED_MODULE_2__["logOff"]
-  }, "Logout"))))))));
-}
+  }]);
+
+  return NavBar;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); // export default function NavBar() {
+//     return (
+//         <>
+//             <div className="nav-container">
+//                 <nav className="navbar navbar-expand-lg navbar-dark" style={{ 'paddingLeft': 0 + 'px' }}>
+//                     <IfNotAuthenticated>
+//                         <Link className="navbar-brand" to="/">Shhh.</Link>
+//                     </IfNotAuthenticated>
+//                     <IfAuthenticated>
+//                         <Link className="navbar-brand" to="/chat">Shhh.</Link>
+//                     </IfAuthenticated>
+//                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks"
+//                         aria-controls="navbarlinks" aria-expanded="false" aria-label="Toggle navigation">
+//                         <span className="navbar-toggler-icon"></span>
+//                     </button>
+//                     <div className="collapse navbar-collapse" id="navbarLinks">
+//                         <ul className="navbar-nav ml-auto">
+//                             <li className="nav-item">
+//                                 <Link className="nav-link" to="/howitworks">How it Works</Link>
+//                             </li>
+//                             <IfNotAuthenticated>
+//                                 <li className="nav-item">
+//                                     <Link className="nav-link" to="/signup">Sign Up</Link>
+//                                 </li>
+//                                 <li className="nav-item">
+//                                     <Link className="nav-link" to="/signin">Login</Link>
+//                                 </li>
+//                             </IfNotAuthenticated>
+//                             <IfAuthenticated>
+//                                 <li>
+//                                     <Link className="nav-link" to="/" onClick={logOff}>Logout</Link>
+//                                 </li>
+//                             </IfAuthenticated>
+//                         </ul>
+//                     </div>
+//                 </nav>
+//             </div>
+//         </>
+//     )
+// }
+
+
+
 
 /***/ }),
 

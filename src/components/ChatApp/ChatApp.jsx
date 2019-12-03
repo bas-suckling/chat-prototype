@@ -26,7 +26,7 @@ export default function ChatApp() {
         </canvas>
             <div id="chatWindow">
                 <div className="row">
-                    <div className="col-sm-3">
+                    {/* <div className="col-sm-3">
                         <div id="rooms" className="window">
                             <ul>
                                 {
@@ -38,8 +38,8 @@ export default function ChatApp() {
                                 }
                             </ul>
                         </div>
-                    </div>
-                    <div className="col-sm-9">
+                    </div> */}
+                    <div className="col-sm-12">
                         <div id="messageWall" className='window'>
                             <p className="adminMsg">Admin: Use a shared secret key to encrypt your message.</p>
                             {allChats[activeTopic].map((chat, i) => (
@@ -80,10 +80,6 @@ export default function ChatApp() {
                                 <textarea id="mySecretKey" className="form-control" type="text" placeholder="Write the secret key here." value={secretKey} onChange={e => changeSecretKey(e.target.value)}>>
                                     </textarea>
                             </div>
-                            {/* <div className="col-sm-4">
-                            <input id="otherUserSecretKey" className="form-control" type="text" placeholder="Write their secret key here.">
-                                    </input>
-                            </div> */}
                         </div>
                     </div>
                 </div>
