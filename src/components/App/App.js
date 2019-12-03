@@ -8,22 +8,26 @@ import LandingPage from '../LandingPage/LandingPage'
 import Signup from  '../Signup/Signup'
 import Howitworks from '../Howitworks/Howitworks'
 import SignIn from '../SignIn/SignIn';
-import { isAuthenticated } from 'authenticare/client'
+import { IfAuthenticated, IfNotAuthenticated } from '../Authenticated/Authenticated'
 
-//make classbaed component, component should update - compare current to past props
+class App extends React.Component {
+  constructor(props){
+    super(props)
+    
+}
 
-//add state of logged in, pass callback refresh or loggedin or out and pass to login and signup components
-
-
-function App() {
+  render() {
   return (
     <Router>
       <div className="App">
-        <NavBar loggedIn ={isAuthenticated()}/>
+        <Route path='/' component={NavBar}/>
+        <Route exact path="/howitworks" component={Howitworks}/>
+        <IfNotAuthenticated>
         <Route exact path='/' component={LandingPage}/>
         <Route exact path="/signup" component={Signup}/>
         <Route exact path="/signin" component={SignIn}/>
-        <Route exact path="/howitworks" component={Howitworks}/>
+        </IfNotAuthenticated>
+        <IfAuthenticated>
         <Route exact path="/chat" render={props => {
           return (
             <Store>
@@ -31,10 +35,34 @@ function App() {
             </Store>
           )
         }}/>
+        </IfAuthenticated>
         <Footer/>
       </div>
     </Router>
   );
 }
+}
+
+// function App() {
+//   return (
+//     <Router>
+//       <div className="App">
+//         <NavBar loggedIn ={isAuthenticated()}/>
+//         <Route exact path='/' component={LandingPage}/>
+//         <Route exact path="/signup" component={Signup}/>
+//         <Route exact path="/signin" component={SignIn}/>
+//         <Route exact path="/howitworks" component={Howitworks}/>
+//         <Route exact path="/chat" render={props => {
+//           return (
+//             <Store>
+//               <ChatApp />
+//             </Store>
+//           )
+//         }}/>
+//         <Footer/>
+//       </div>
+//     </Router>
+//   );
+// }
 
 export default App;
