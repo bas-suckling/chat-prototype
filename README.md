@@ -1,8 +1,8 @@
-#Shhh! Encrypted Chat
+# Shhh! Encrypted Chat
 
-### This project was created as my personal project during Dev Academy. 
+## This project was created as my personal project during Dev Academy. 
 
-<a>https://shhh-chat-app.heroku.com</a>
+### See the deployed version here: <a>https://shhh-chat-app.heroku.com</a>
 
 It is an encrypted chat application, and is the first (semi) complete React App I have made. The chat functionality is facilitated using Socket.io and the encryption functions come from the Crypto Node library. 
 
