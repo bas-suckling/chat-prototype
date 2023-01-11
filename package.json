@@ -13,7 +13,7 @@
     "babel-loader": "^8.0.5",
     "cors": "^2.8.5",
     "exrpess": "0.0.1-security",
-    "knex": "^0.20.1",
+    "knex": "^2.4.0",
     "nodemon": "^1.19.4",
     "path": "^0.12.7",
     "random-username-generator": "^1.0.4",
